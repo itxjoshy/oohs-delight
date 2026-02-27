@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fork -->
+  <rect x="18" y="8" width="4" height="20" rx="2" fill="#1a1a1a"/>
+  <rect x="18" y="8" width="4" height="10" rx="2" fill="#1a1a1a"/>
+  <rect x="24" y="8" width="4" height="10" rx="2" fill="#1a1a1a"/>
+  <rect x="30" y="8" width="4" height="10" rx="2" fill="#1a1a1a"/>
+  <path d="M18,18 Q22,22 32,18 L32,21 Q22,25 18,21 Z" fill="#1a1a1a"/>
+  <rect x="22" y="21" width="8" height="35" rx="4" fill="#1a1a1a"/>
+  <!-- Knife -->
+  <rect x="38" y="8" width="6" height="48" rx="3" fill="#1a1a1a"/>
+  <path d="M38,8 Q50,12 44,26 L38,26 Z" fill="#1a1a1a"/>
+</svg>

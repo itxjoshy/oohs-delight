@@ -4,6 +4,10 @@ import jollofImg from "../assets/card-images/c-i-1.png";
 import friedImg from "../assets/card-images/c-i-2.png";
 import meatImg from "../assets/card-images/c-i-3.png";
 import soupImg from "../assets/card-images/c-i-4.png";
+import food from "../assets/icon_food.svg";
+import bulk from "../assets/icon_bulk.svg";
+import book from "../assets/icon_booking.svg";
+
 import "./landing.css";
 
 const steps = [
@@ -95,9 +99,24 @@ function Landing() {
         </div>
       </main>
       <div className="selector">
-        <button>Food</button>
-        <button>Bulk</button>
-        <button>Booking</button>
+        <button aria-label="Food">
+          <span className="selector-icon" aria-hidden="true">
+            <img src={food} alt="" />
+          </span>
+          Food
+        </button>
+        <button aria-label="Bulk orders">
+          <span className="selector-icon" aria-hidden="true">
+            <img src={bulk} alt="" />
+          </span>
+          Bulk
+        </button>
+        <button aria-label="Booking">
+          <span className="selector-icon" aria-hidden="true">
+            <img src={book} alt="" />
+          </span>
+          Booking
+        </button>
       </div>
       <div className="food-section">
         <h2>Food Selections</h2>

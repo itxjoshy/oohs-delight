@@ -25,6 +25,7 @@ a:hover {
 
 body {
   min-height: 100vh;
+  background-color: #efefef;
 }
 body::-webkit-scrollbar {
   width: 0;
@@ -45,9 +46,9 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #000000;
+  background-color: #ffffff;
   cursor: pointer;
-  color: #ffffff;
+  color: #000000;
   transition: border-color 0.25s;
 }
 button:hover {

@@ -1,4 +1,6 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import Page from "./page";
 import menuIcon from "../assets/menu-icon.svg";
 import cartIcon from "../assets/cart-icon.svg";
 import BannerImg from "../assets/banner-img.png";
@@ -76,7 +78,12 @@ const steps = [
       "Track your order in real time and get it delivered hot to your door.",
   },
 ];
-
+const features = [
+  { icon: "🚚", title: "Fast Delivery" },
+  { icon: "🥗", title: "Freshly Made" },
+  { icon: "🎉", title: "Custom Event Orders" },
+  { icon: "💬", title: "WhatsApp Only" },
+];
 const foodOptions = [
   { name: "Jollof Rice", price: 10, img: jollofImg },
   { name: "Fried Rice", price: 12, img: friedImg },
@@ -85,6 +92,33 @@ const foodOptions = [
 ];
 
 function Landing() {
+  const [activeContent, setActiveContent] = useState(null); // null = no page open
+  const [isOpen, setIsOpen] = useState(false);
+  const openPage = (contentId) => {
+    setActiveContent(contentId);
+  };
+
+  // When activeContent changes, trigger slide-in
+  useEffect(() => {
+    if (activeContent) {
+      // timeout ensures CSS transition happens
+      const timer = setTimeout(() => setIsOpen(true), 50);
+      document.body.style.overflow = "hidden";
+      return () => {
+        clearTimeout(timer);
+        document.body.style.overflow = "";
+      };
+    } else {
+      setIsOpen(false);
+    }
+  }, [activeContent]);
+
+  const closePage = () => {
+    setIsOpen(false);
+    // wait for animation to finish before unmounting
+    setTimeout(() => setActiveContent(null), 500);
+  };
+
   return (
     <>
       <header>
@@ -105,19 +139,22 @@ function Landing() {
         </div>
       </main>
       <div className="selector">
-        <button aria-label="Food">
+        <button aria-label="Food" onClick={() => openPage("Food")}>
           <span className="selector-icon" aria-hidden="true">
             <img src={food} alt="" />
           </span>
           Food
         </button>
-        <button aria-label="Bulk orders">
+        <button
+          aria-label="Bulk orders"
+          onClick={() => openPage("Bulk orders")}
+        >
           <span className="selector-icon" aria-hidden="true">
             <img src={bulk} alt="" />
           </span>
           Bulk
         </button>
-        <button aria-label="Booking">
+        <button aria-label="Booking" onClick={() => openPage("Booking")}>
           <span className="selector-icon" aria-hidden="true">
             <img src={book} alt="" />
           </span>
@@ -164,6 +201,24 @@ function Landing() {
           ))}
         </div>
       </section>
+      <section className="features-section">
+        <h2>Why Choose Us</h2>
+        <div className="features-grid">
+          {features.map((feature, idx) => (
+            <div key={idx} className="feature-card">
+              <div className="feature-icon">{feature.icon}</div>
+              <p className="feature-title">{feature.title}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      {activeContent && (
+        <Page
+          activeContent={activeContent}
+          isOpen={isOpen}
+          closePage={closePage}
+        />
+      )}
     </>
   );
 }

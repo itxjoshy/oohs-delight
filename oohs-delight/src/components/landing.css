@@ -116,6 +116,8 @@ main {
 .hiw-section {
   padding: 48px 24px;
   text-align: center;
+  background-color: white;
+  border-radius: 40px;
 }
 
 .hiw-heading {
@@ -203,7 +205,45 @@ main {
 .hiw-dot:last-child {
   top: 65%;
 }
+.features-section {
+  padding: 20px;
+  text-align: center;
+}
 
+.features-section h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.feature-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 @media (min-width: 640px) {
   .hiw-section {
     padding: 72px 40px;

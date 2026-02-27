@@ -1,4 +1,6 @@
 import React from "react";
+import menuIcon from "../assets/menu-icon.svg";
+import cartIcon from "../assets/cart-icon.svg";
 import BannerImg from "../assets/banner-img.png";
 import jollofImg from "../assets/card-images/c-i-1.png";
 import friedImg from "../assets/card-images/c-i-2.png";
@@ -86,9 +88,13 @@ function Landing() {
   return (
     <>
       <header>
-        <button>c</button>
+        <button>
+          <img src={menuIcon} alt="" />
+        </button>
         <h1>Logo</h1>
-        <button>c</button>
+        <button>
+          <img src={cartIcon} alt="" />
+        </button>
       </header>
       <main>
         <div className="main-content">

@@ -14,5 +14,25 @@ const foods = [
     name: "White Rice & Stew",
     proteins: ["Chicken", "Fish", "Beef"],
   },
+  {
+    id: 4,
+    name: "White Rice & Stew",
+    proteins: ["Chicken", "Fish", "Beef"],
+  },
+  {
+    id: 5,
+    name: "White Rice & Stew",
+    proteins: ["Chicken", "Fish", "Beef"],
+  },
+  {
+    id: 6,
+    name: "White Rice & Stew",
+    proteins: ["Chicken", "Fish", "Beef"],
+  },
+  {
+    id: 7,
+    name: "White Rice & Stew",
+    proteins: ["Chicken", "Fish", "Beef"],
+  },
 ];
 export default foods;

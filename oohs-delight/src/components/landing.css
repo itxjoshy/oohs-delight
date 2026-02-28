@@ -65,7 +65,9 @@ main {
   padding: 0 20px;
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 100px);
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   button {
     width: 100%;

@@ -145,10 +145,7 @@ function Landing() {
           </span>
           Food
         </button>
-        <button
-          aria-label="Bulk orders"
-          onClick={() => openPage("Bulk orders")}
-        >
+        <button aria-label="Bulk orders" onClick={() => openPage("Bulk-order")}>
           <span className="selector-icon" aria-hidden="true">
             <img src={bulk} alt="" />
           </span>

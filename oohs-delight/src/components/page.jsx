@@ -1,13 +1,18 @@
 import React from "react";
+import closeButton from "../assets/close-menu-icon.svg";
+import SingleOrder from "./SingleOrder";
+import BulkOrder from "./BulkOrder";
+import Booking from "./Booking";
 import "./page.css";
 function Page({ activeContent, isOpen, closePage }) {
   return (
     <div className={`slide-page ${isOpen ? "open" : "closed"}`}>
       <button className="close-btn" onClick={closePage}>
-        Close
+        <img src={closeButton} alt="Close" />
       </button>
-      <h2>{activeContent}</h2>
-      <p>This is reusable content for {activeContent}</p>
+      {activeContent === "Food" && <SingleOrder />}
+      {activeContent === "Bulk-order" && <BulkOrder />}
+      {activeContent === "Booking" && <Booking />}
     </div>
   );
 }

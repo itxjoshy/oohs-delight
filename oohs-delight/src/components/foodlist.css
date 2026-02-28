@@ -1,0 +1,115 @@
+.cat-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.food-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card */
+.food-card {
+  background: white;
+  border-bottom: 1px solid #3c3c3c3c;
+  padding: 15px;
+}
+
+/* Header */
+.food-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Plus Button */
+.plus-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.1rem;
+}
+.plus-btn:active {
+  outline: none;
+}
+
+/* Expand animation */
+.expand-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.expand-section.open {
+  max-height: 300px;
+}
+
+/* Inside expanded content */
+.expand-content {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Dropdown */
+select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Quantity */
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-control button {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-control span {
+  font-weight: normal;
+}
+
+/* Add to cart button */
+.add-btn {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(255, 166, 0);
+  color: white;
+  cursor: pointer;
+}
+
+/* .add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+} */

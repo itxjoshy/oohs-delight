@@ -3,6 +3,7 @@ import closeButton from "../assets/close-menu-icon.svg";
 import SingleOrder from "./SingleOrder";
 import BulkOrder from "./BulkOrder";
 import Booking from "./Booking";
+import Cart from "./Cart";
 import "./page.css";
 function Page({ activeContent, isOpen, closePage }) {
   return (
@@ -13,6 +14,7 @@ function Page({ activeContent, isOpen, closePage }) {
       {activeContent === "Food" && <SingleOrder />}
       {activeContent === "Bulk-order" && <BulkOrder />}
       {activeContent === "Booking" && <Booking />}
+      {activeContent === "Cart" && <Cart />}
     </div>
   );
 }

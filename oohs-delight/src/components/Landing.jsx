@@ -126,7 +126,7 @@ function Landing() {
           <img src={menuIcon} alt="" />
         </button>
         <h1>Logo</h1>
-        <button>
+        <button onClick={() => openPage("Cart")}>
           <img src={cartIcon} alt="" />
         </button>
       </header>

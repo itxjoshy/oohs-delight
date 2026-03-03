@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FoodCard from "./FoodCard";
 import "./foodlist.css";
 import foods from "./data.js";
 const FoodList = () => {
   const [expandedId, setExpandedId] = useState(null);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || [],
+  );
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const handleAddToCart = (food, quantity, protein) => {
     const newItem = {
@@ -14,11 +19,11 @@ const FoodList = () => {
     };
 
     setCart([...cart, newItem]);
-    setExpandedId(null); // collapse after adding
+    console.log("Cart updated:", [...cart, newItem]);
   };
 
   return (
-    <div className="flex flex-col gap-4 p-4">
+    <div>
       {foods.map((food) => (
         <FoodCard
           key={food.id}

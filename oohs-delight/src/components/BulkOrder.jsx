@@ -10,6 +10,11 @@ function BulkOrder() {
       </p>
       <div className="select-container">
         <FoodList />
+        <textarea
+          name="specialRequests"
+          id="specialRequests"
+          placeholder="Any special requests?"
+        ></textarea>
       </div>
     </div>
   );

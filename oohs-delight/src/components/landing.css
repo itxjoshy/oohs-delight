@@ -94,11 +94,10 @@ main {
 }
 .food-selection-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
 
   button {
-    flex: 1 1 calc(25% - 10px);
     border-radius: 25px;
     padding: 20px;
     display: flex;

@@ -166,8 +166,10 @@ function Landing() {
               <div className="img">
                 <img src={food.img} alt={food.name} />
               </div>
-              <p>{food.name}</p>
-              <p>N{food.price}</p>
+              <div className="food-de">
+                <p>{food.name}</p>
+                <p>N{food.price}</p>
+              </div>
             </button>
           ))}
         </div>

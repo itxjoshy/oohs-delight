@@ -9,7 +9,13 @@ function Cart() {
         <div className="cart-content">
           {cartItems.map((item, i) => (
             <div key={item.name + i} className="cart-item">
-              {item.name} - {item.quantity} - {item.protein}
+              <p>
+                {item.name} - {item.protein}
+              </p>
+              <div className="edit">
+                <button>edit</button>
+                <p> x{item.quantity}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -7,14 +7,18 @@
 }
 .cart-item {
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.076);
-  padding: 20px 0;
+  padding: 15px 0;
 }
 .cart-content {
-  flex: 1;
   overflow-y: auto; /* makes items scroll */
   padding: 20px;
+  height: 80%;
 }
-
+.edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .cart-button {
   position: fixed;
   padding: 18px;
@@ -23,13 +27,13 @@
   display: flex;
   justify-content: center;
   bottom: 20px;
-
+  background: rgb(255, 255, 255);
   color: white;
   border: none;
   font-weight: bold;
 }
 .cart-button > button {
-  background: #1e73e8;
+  background: orange;
   border: none;
   padding: 12px 24px;
   border-radius: 4px;

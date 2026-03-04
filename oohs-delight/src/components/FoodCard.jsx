@@ -6,7 +6,7 @@ function FoodCard({ food, expanded, onExpand, onAdd }) {
   const [protein, setProtein] = useState("");
 
   return (
-    <div className="food-card">
+    <div className="food-card" onClick={onExpand}>
       {/* Top section */}
       <div className="food-header">
         <h3>{food.name}</h3>
@@ -17,9 +17,19 @@ function FoodCard({ food, expanded, onExpand, onAdd }) {
       </div>
 
       {/* Expand section */}
-      <div className={`expand-section ${expanded ? "open" : ""}`}>
+      <div
+        className={`expand-section ${expanded ? "open" : ""}`}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <div className="expand-content">
-          <select value={protein} onChange={(e) => setProtein(e.target.value)}>
+          <select
+            value={protein}
+            onChange={(e) => {
+              setProtein(e.target.value);
+            }}
+          >
             <option value="">Select Protein</option>
             {food.proteins.map((p, i) => (
               <option key={i} value={p}>

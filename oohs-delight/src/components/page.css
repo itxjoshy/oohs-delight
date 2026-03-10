@@ -3,8 +3,8 @@
   top: 70px;
   left: 100%; /* start off-screen right */
   width: 100%;
-  height: 90%;
-  background: #fff;
+  height: 100vh;
+  background: #f9f9f9;
   z-index: 100;
   padding: 20px;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  /* padding-bottom: 4rem; */
+  padding-bottom: 4rem;
 }
 
 .slide-page.open {

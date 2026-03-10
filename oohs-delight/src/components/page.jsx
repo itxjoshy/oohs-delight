@@ -9,9 +9,10 @@ function Page({ activeContent, isOpen, closePage }) {
   return (
     <div
       className={`slide-page ${isOpen ? "open" : "closed"}`}
-      style={{
-        overflow: activeContent === "Cart" && isOpen ? "hidden" : "auto",
-      }}
+      aria-hidden={!isOpen}
+      {...(activeContent === "Cart" && isOpen
+        ? { style: { overflow: "hidden" } }
+        : {})}
     >
       <button className="close-btn" onClick={closePage}>
         <img src={closeButton} alt="Close" />

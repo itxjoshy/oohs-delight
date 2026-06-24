@@ -43,7 +43,7 @@
 }
 
 .menu-list {
-  padding: 16px var(--container-padding) 0;
+  padding: 16px var(--container-padding) 40px;
   flex-direction: column;
 }
 

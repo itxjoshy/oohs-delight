@@ -58,3 +58,29 @@ export const categories = [
   "Small Chops",
   "Drinks",
 ];
+export const bulkItems = [
+  {
+    id: 1,
+    icon: "rice_bowl",
+    name: "Party Jollof Rice",
+    description: "Signature smoky jollof rice served with fried plantains.",
+    price: 3500,
+    category: "Rice Dishes",
+  },
+  {
+    id: 2,
+    icon: "soup_kitchen",
+    name: "Egusi Soup & Pounded Yam",
+    description: "Rich melon seed soup with spinach and assorted meats.",
+    price: 4500,
+    category: "Soups & Swallows",
+  },
+  {
+    id: 3,
+    icon: "kebab_dining",
+    name: "Spicy Beef Suya",
+    description: "Thinly sliced grilled beef coated in fiery peanut spice mix.",
+    price: 2000,
+    category: "Proteins",
+  },
+];

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import closeButton from "../assets/close-menu-icon.svg";
-import Book from "./options/book";
-import Food from "./options/food";
-import Bulk from "./options/bulk";
+import Book from "./options/Book";
+import Food from "./options/Food";
+import Bulk from "./options/Bulk";
 import Cart from "./Cart";
 import "./page.css";
 function Page({ activeContent, isOpen, closePage }) {

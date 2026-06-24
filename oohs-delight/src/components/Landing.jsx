@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Page from "./page";
+import Nav from "./Nav";
 import menuIcon from "../assets/menu-icon.svg";
 import cartIcon from "../assets/cart-icon.svg";
 import BannerImg from "../assets/banner-img.png";
@@ -13,6 +14,7 @@ import "./landing.css";
 
 const orderChoices = [
   {
+    id: "food",
     image: food,
     icon: "restaurant",
     title: "food",
@@ -20,6 +22,7 @@ const orderChoices = [
     label: " Requires min. 5 portions ",
   },
   {
+    id: "bulk",
     image: bulk,
     icon: "inventory_2",
     title: "bulk order",
@@ -27,6 +30,7 @@ const orderChoices = [
     label: " Requires min. 10 portions per item",
   },
   {
+    id: "booking",
     image: bookings,
     icon: "celebration",
     title: "bookings",
@@ -80,7 +84,13 @@ function Landing() {
       </main>
       <section className="card-section">
         {orderChoices.map((item, _i) => (
-          <button className="card" key={_i} onClick={() => console.log(_i)}>
+          <button
+            className="card"
+            key={_i}
+            onClick={() => {
+              openPage(item.id);
+            }}
+          >
             <div className="card-image">
               <img src={item.image} alt={item.title} />
             </div>
@@ -101,6 +111,14 @@ function Landing() {
           </button>
         ))}
       </section>
+      {activeContent !== null && (
+        <Page
+          activeContent={activeContent}
+          isOpen={isOpen}
+          closePage={closePage}
+        />
+      )}
+      <Nav />
     </>
   );
 }

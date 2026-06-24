@@ -1,0 +1,156 @@
+.single-order {
+  padding-bottom: 80px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-outline-variant);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--container-padding);
+}
+
+.header h1 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.header-spacer {
+  width: 40px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--color-on-surface);
+}
+
+.filter-sticky {
+  position: sticky;
+  top: 64px;
+  z-index: 40;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-outline-variant);
+  padding: 0 var(--container-padding);
+}
+
+.menu-list {
+  padding: 16px var(--container-padding) 0;
+  flex-direction: column;
+}
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: var(--radius-lg);
+  background: #f9efe4;
+  border: 1px solid #ead9c5;
+  margin-bottom: 12px;
+  transition: var(--transition-base);
+}
+
+.menu-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.menu-icon .material-symbols-outlined {
+  font-size: 36px;
+  color: var(--color-primary);
+  opacity: 0.4;
+}
+
+.menu-info {
+  margin-left: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.menu-info h3 {
+  font-size: 1rem;
+  font-family: var(--font-display);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-row {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.unit {
+  font-weight: 400;
+  color: var(--color-on-surface-variant);
+  font-size: 0.75rem;
+}
+
+.checkout-price {
+  font-size: 1.25rem;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-outline-variant);
+  background: var(--color-surface);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.stepper--active {
+  border-color: rgba(139, 58, 15, 0.4);
+  background: rgba(139, 58, 15, 0.12);
+}
+
+.stepper-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.stepper-btn .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.stepper-qty {
+  width: 24px;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-on-surface);
+}
+
+.stepper-qty--active {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.sticky-bottom {
+  position: sticky;
+  inset: 0;
+}

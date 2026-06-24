@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import closeButton from "../assets/close-menu-icon.svg";
-
+import Book from "./options/book";
+import Food from "./options/food";
+import Bulk from "./options/bulk";
 import Cart from "./Cart";
 import "./page.css";
 function Page({ activeContent, isOpen, closePage }) {
@@ -12,12 +14,9 @@ function Page({ activeContent, isOpen, closePage }) {
         ? { style: { overflow: "hidden" } }
         : {})}
     >
-      <button className="close-btn" onClick={closePage}>
-        <img src={closeButton} alt="Close" />
-      </button>
-      {activeContent === "Food" && <SingleOrder />}
-      {activeContent === "Bulk-order" && <BulkOrder />}
-      {activeContent === "Booking" && <Booking />}
+      {activeContent === "food" && <Food onClose={closePage} />}
+      {activeContent === "bulk" && <Bulk onClose={closePage} />}
+      {activeContent === "booking" && <Book onClose={closePage} />}
       {activeContent === "Cart" && <Cart />}
     </div>
   );
